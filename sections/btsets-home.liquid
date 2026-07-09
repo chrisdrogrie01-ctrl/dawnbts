@@ -7,13 +7,11 @@
   assign review_blocks = section.blocks | where: 'type', 'review'
 %}
 
-<section class="btsets-home color-{{ section.settings.color_scheme }} gradient{% unless section.settings.enable_animations %} btsets-home--no-animations{% endunless %}" style="--btsets-accent: {{ section.settings.accent_color }}; --btsets-secondary: {{ section.settings.secondary_accent }}; --btsets-speed: {{ section.settings.animation_speed }}s; --btsets-padding-top: {{ section.settings.padding_top }}px; --btsets-padding-bottom: {{ section.settings.padding_bottom }}px; --btsets-card-columns: {{ section.settings.collection_columns_desktop }};">
-  {% if section.settings.show_glow_effects %}
-    <div class="btsets-glow btsets-glow--one" aria-hidden="true"></div>
-    <div class="btsets-glow btsets-glow--two" aria-hidden="true"></div>
-  {% endif %}
+<section class="btsets-home color-{{ section.settings.color_scheme }} gradient" style="--btsets-accent: {{ section.settings.accent_color }}; --btsets-secondary: {{ section.settings.secondary_accent }}; --btsets-speed: {{ section.settings.animation_speed }}s;">
+  <div class="btsets-glow btsets-glow--one" aria-hidden="true"></div>
+  <div class="btsets-glow btsets-glow--two" aria-hidden="true"></div>
 
-  <div class="btsets-hero page-width btsets-hero--{{ section.settings.hero_media_position }} btsets-reveal">
+  <div class="btsets-hero page-width btsets-reveal">
     <div class="btsets-hero__copy">
       {% if section.settings.eyebrow != blank %}
         <p class="btsets-eyebrow">{{ section.settings.eyebrow }}</p>
@@ -39,16 +37,12 @@
     </div>
   </div>
 
-  {% if section.settings.show_trust_bar and trust_blocks.size > 0 %}
+  {% if trust_blocks.size > 0 %}
     <div class="btsets-trust" aria-label="Store benefits">
       <div class="btsets-trust__track">
         {% for i in (1..2) %}
           {% for block in trust_blocks %}
-            {% if block.settings.link != blank %}
-              <a href="{{ block.settings.link }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</a>
-            {% else %}
-              <span {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
-            {% endif %}
+            <span {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
           {% endfor %}
         {% endfor %}
       </div>
@@ -57,24 +51,18 @@
 
   <div class="page-width btsets-stack">
     <div class="btsets-section-heading btsets-reveal">
-      {% if section.settings.show_collections and section.settings.collections_eyebrow != blank %}
+      {% if section.settings.collections_eyebrow != blank %}
         <p class="btsets-eyebrow">{{ section.settings.collections_eyebrow }}</p>
       {% endif %}
-      {% if section.settings.show_collections and section.settings.collections_heading != blank %}
+      {% if section.settings.collections_heading != blank %}
         <h2>{{ section.settings.collections_heading }}</h2>
       {% endif %}
     </div>
 
-    {% if section.settings.show_collections and collection_blocks.size > 0 %}
+    {% if collection_blocks.size > 0 %}
       <div class="btsets-collections">
         {% for block in collection_blocks %}
-          {% liquid
-            assign card_url = block.settings.link
-            if card_url == blank and block.settings.collection != blank
-              assign card_url = block.settings.collection.url
-            endif
-          %}
-          <a class="btsets-card btsets-reveal" href="{{ card_url | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>
+          <a class="btsets-card btsets-reveal" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
             {% if block.settings.image != blank %}
               {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '350, 500, 700', sizes: '(min-width: 750px) 33vw, 100vw', alt: block.settings.title }}
             {% endif %}
@@ -85,14 +73,9 @@
       </div>
     {% endif %}
 
-    {% if section.settings.show_bundle and section.settings.bundle_heading != blank %}
+    {% if section.settings.bundle_heading != blank %}
       <div class="btsets-bundle btsets-reveal">
-        {% if section.settings.bundle_image != blank %}
-          <div class="btsets-bundle__image">
-            {{ section.settings.bundle_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '350, 500, 700', sizes: '(min-width: 750px) 28vw, 100vw', alt: section.settings.bundle_heading }}
-          </div>
-        {% endif %}
-        <div class="btsets-bundle__copy">
+        <div>
           {% if section.settings.bundle_badge != blank %}
             <span class="btsets-badge">{{ section.settings.bundle_badge }}</span>
           {% endif %}
@@ -105,11 +88,10 @@
       </div>
     {% endif %}
 
-    {% if section.settings.show_steps and step_blocks.size > 0 %}
+    {% if step_blocks.size > 0 %}
       <div class="btsets-how">
         {% for block in step_blocks %}
           <div class="btsets-card btsets-reveal" {{ block.shopify_attributes }}>
-            {% if block.settings.icon != blank %}<span class="btsets-step-icon">{{ block.settings.icon }}</span>{% endif %}
             <strong>{{ block.settings.number }}</strong>
             <h3>{{ block.settings.title }}</h3>
             <p>{{ block.settings.text }}</p>
@@ -118,13 +100,10 @@
       </div>
     {% endif %}
 
-    {% if section.settings.show_reviews and review_blocks.size > 0 %}
+    {% if review_blocks.size > 0 %}
       <div class="btsets-reviews">
         {% for block in review_blocks %}
           <article class="btsets-card btsets-reveal" {{ block.shopify_attributes }}>
-            {% if block.settings.image != blank %}
-              {{ block.settings.image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80, 160', sizes: '80px', alt: block.settings.author, class: 'btsets-review__image' }}
-            {% endif %}
             <span>{{ block.settings.stars }}</span>
             <p>{{ block.settings.quote }}</p>
             <strong>{{ block.settings.author }}</strong>
@@ -133,7 +112,7 @@
       </div>
     {% endif %}
 
-    {% if section.settings.show_newsletter and section.settings.newsletter_heading != blank %}
+    {% if section.settings.newsletter_heading != blank %}
       <div class="btsets-newsletter btsets-reveal">
         <div>
           {% if section.settings.newsletter_eyebrow != blank %}
@@ -155,56 +134,89 @@
 {
   "name": "BTSETS homepage",
   "settings": [
-    { "type": "header", "content": "Global style" },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-4" },
     { "type": "color", "id": "accent_color", "label": "Primary accent", "default": "#1578ff" },
     { "type": "color", "id": "secondary_accent", "label": "Secondary accent", "default": "#35ff68" },
-    { "type": "checkbox", "id": "enable_animations", "label": "Enable animations", "default": true },
-    { "type": "checkbox", "id": "show_glow_effects", "label": "Show animated glow effects", "default": true },
-    { "type": "range", "id": "animation_speed", "min": 12, "max": 40, "step": 2, "unit": "s", "label": "Trust marquee speed", "default": 24 },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding", "default": 64 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding", "default": 64 },
+    { "type": "range", "id": "animation_speed", "min": 12, "max": 40, "step": 2, "unit": "s", "label": "Marquee animation speed", "default": 24 },
     { "type": "header", "content": "Hero" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Between The Sets" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Recover Harder. Perform Better." },
     { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Premium recovery tools and training accessories for athletes who take every set seriously." },
     { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Shop Now" },
     { "type": "url", "id": "cta_link", "label": "CTA link" },
-    { "type": "select", "id": "hero_media_position", "label": "Desktop media position", "default": "right", "options": [{ "value": "right", "label": "Right" }, { "value": "left", "label": "Left" }] },
     { "type": "image_picker", "id": "hero_image", "label": "Hero fallback image" },
     { "type": "video", "id": "hero_video", "label": "Hero autoplay video" },
-    { "type": "header", "content": "Trust bar" },
-    { "type": "checkbox", "id": "show_trust_bar", "label": "Show trust bar", "default": true },
     { "type": "header", "content": "Collections" },
-    { "type": "checkbox", "id": "show_collections", "label": "Show collections", "default": true },
     { "type": "text", "id": "collections_eyebrow", "label": "Collections eyebrow", "default": "Shop by goal" },
     { "type": "text", "id": "collections_heading", "label": "Collections heading", "default": "Recovery gear built for the work between the sets." },
-    { "type": "range", "id": "collection_columns_desktop", "min": 2, "max": 4, "step": 1, "label": "Collection columns on desktop", "default": 3 },
     { "type": "header", "content": "Bundle spotlight" },
-    { "type": "checkbox", "id": "show_bundle", "label": "Show bundle spotlight", "default": true },
-    { "type": "image_picker", "id": "bundle_image", "label": "Bundle image" },
     { "type": "text", "id": "bundle_badge", "label": "Badge", "default": "Save 20%" },
     { "type": "text", "id": "bundle_heading", "label": "Heading", "default": "Recovery Starter Pack" },
     { "type": "textarea", "id": "bundle_text", "label": "Text", "default": "Everything athletes need to loosen tight muscles, prime movement patterns, and bounce back faster after heavy sessions." },
     { "type": "text", "id": "bundle_cta_label", "label": "CTA label", "default": "Build your kit" },
     { "type": "url", "id": "bundle_link", "label": "CTA link" },
-    { "type": "header", "content": "How it works" },
-    { "type": "checkbox", "id": "show_steps", "label": "Show how-it-works steps", "default": true },
-    { "type": "header", "content": "Reviews" },
-    { "type": "checkbox", "id": "show_reviews", "label": "Show reviews", "default": true },
     { "type": "header", "content": "Newsletter" },
-    { "type": "checkbox", "id": "show_newsletter", "label": "Show newsletter", "default": true },
     { "type": "text", "id": "newsletter_eyebrow", "label": "Eyebrow", "default": "Join the crew" },
     { "type": "text", "id": "newsletter_heading", "label": "Heading", "default": "Get 10% off your first order" },
     { "type": "text", "id": "newsletter_placeholder", "label": "Email placeholder", "default": "Email address" },
     { "type": "text", "id": "newsletter_button", "label": "Button label", "default": "Sign up" }
   ],
   "blocks": [
-    { "type": "trust_item", "name": "Trust bar item", "settings": [{ "type": "text", "id": "text", "label": "Text", "default": "⚡ Free shipping over €75" }, { "type": "url", "id": "link", "label": "Optional link" }] },
-    { "type": "collection_card", "name": "Collection card", "settings": [{ "type": "text", "id": "title", "label": "Title", "default": "Resistance Bands" }, { "type": "text", "id": "text", "label": "Text", "default": "Mobility, warm-ups, strength" }, { "type": "collection", "id": "collection", "label": "Collection" }, { "type": "url", "id": "link", "label": "Override link" }, { "type": "image_picker", "id": "image", "label": "Image" }] },
-    { "type": "step", "name": "How it works step", "settings": [{ "type": "text", "id": "icon", "label": "Icon or emoji", "default": "🏋️" }, { "type": "text", "id": "number", "label": "Number", "default": "01" }, { "type": "text", "id": "title", "label": "Title", "default": "Choose your gear" }, { "type": "textarea", "id": "text", "label": "Text", "default": "Select bands, tools, or bundles for your training style." }] },
-    { "type": "review", "name": "Review", "settings": [{ "type": "image_picker", "id": "image", "label": "Customer image" }, { "type": "text", "id": "stars", "label": "Stars", "default": "★★★★★" }, { "type": "textarea", "id": "quote", "label": "Quote", "default": "The bands are sturdy and the massage gun lives in my gym bag." }, { "type": "text", "id": "author", "label": "Author", "default": "— Marco, Hyrox athlete" }] }
+    {
+      "type": "trust_item",
+      "name": "Trust bar item",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "⚡ Free shipping over €75" }
+      ]
+    },
+    {
+      "type": "collection_card",
+      "name": "Collection card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Resistance Bands" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Mobility, warm-ups, strength" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "How it works step",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number", "default": "01" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Choose your gear" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Select bands, tools, or bundles for your training style." }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "text", "id": "stars", "label": "Stars", "default": "★★★★★" },
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "The bands are sturdy and the massage gun lives in my gym bag." },
+        { "type": "text", "id": "author", "label": "Author", "default": "— Marco, Hyrox athlete" }
+      ]
+    }
   ],
-  "presets": [{ "name": "BTSETS homepage", "blocks": [{ "type": "trust_item", "settings": { "text": "⚡ Free shipping over €75" } }, { "type": "trust_item", "settings": { "text": "🌍 Ships to 41 countries" } }, { "type": "trust_item", "settings": { "text": "⭐ 4.9/5 Reviews" } }, { "type": "trust_item", "settings": { "text": "🔄 30-day returns" } }, { "type": "collection_card", "settings": { "title": "Resistance Bands", "text": "Mobility, warm-ups, strength" } }, { "type": "collection_card", "settings": { "title": "Massage Guns", "text": "Deep tissue recovery" } }, { "type": "collection_card", "settings": { "title": "Recovery Bundles", "text": "Save on complete kits" } }, { "type": "step", "settings": { "icon": "🛒", "number": "01", "title": "Choose your gear", "text": "Select bands, tools, or bundles for your training style." } }, { "type": "step", "settings": { "icon": "💪", "number": "02", "title": "Train & recover", "text": "Use pro-grade equipment before, during, and after workouts." } }, { "type": "step", "settings": { "icon": "⚡", "number": "03", "title": "Feel the difference", "text": "Move better, recover harder, and perform with confidence." } }, { "type": "review", "settings": { "quote": "The bands are sturdy and the massage gun lives in my gym bag.", "author": "— Marco, Hyrox athlete" } }, { "type": "review", "settings": { "quote": "Premium feel, fast shipping, and exactly what I needed for recovery days.", "author": "— Sofia, PT" } }, { "type": "review", "settings": { "quote": "The bundle made it simple to upgrade my warm-up and cooldown.", "author": "— Liam, runner" } }] }]
+  "presets": [
+    {
+      "name": "BTSETS homepage",
+      "blocks": [
+        { "type": "trust_item", "settings": { "text": "⚡ Free shipping over €75" } },
+        { "type": "trust_item", "settings": { "text": "🌍 Ships to 41 countries" } },
+        { "type": "trust_item", "settings": { "text": "⭐ 4.9/5 Reviews" } },
+        { "type": "trust_item", "settings": { "text": "🔄 30-day returns" } },
+        { "type": "collection_card", "settings": { "title": "Resistance Bands", "text": "Mobility, warm-ups, strength" } },
+        { "type": "collection_card", "settings": { "title": "Massage Guns", "text": "Deep tissue recovery" } },
+        { "type": "collection_card", "settings": { "title": "Recovery Bundles", "text": "Save on complete kits" } },
+        { "type": "step", "settings": { "number": "01", "title": "Choose your gear", "text": "Select bands, tools, or bundles for your training style." } },
+        { "type": "step", "settings": { "number": "02", "title": "Train & recover", "text": "Use pro-grade equipment before, during, and after workouts." } },
+        { "type": "step", "settings": { "number": "03", "title": "Feel the difference", "text": "Move better, recover harder, and perform with confidence." } },
+        { "type": "review", "settings": { "quote": "The bands are sturdy and the massage gun lives in my gym bag.", "author": "— Marco, Hyrox athlete" } },
+        { "type": "review", "settings": { "quote": "Premium feel, fast shipping, and exactly what I needed for recovery days.", "author": "— Sofia, PT" } },
+        { "type": "review", "settings": { "quote": "The bundle made it simple to upgrade my warm-up and cooldown.", "author": "— Liam, runner" } }
+      ]
+    }
+  ]
 }
 {% endschema %}

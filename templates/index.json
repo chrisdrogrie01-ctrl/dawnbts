@@ -56,8 +56,7 @@
           "settings": {
             "number": "01",
             "title": "Choose your gear",
-            "text": "Select bands, tools, or bundles for your training style.",
-            "icon": "\ud83d\uded2"
+            "text": "Select bands, tools, or bundles for your training style."
           }
         },
         "step_train": {
@@ -65,8 +64,7 @@
           "settings": {
             "number": "02",
             "title": "Train & recover",
-            "text": "Use pro-grade equipment before, during, and after workouts.",
-            "icon": "\ud83d\udcaa"
+            "text": "Use pro-grade equipment before, during, and after workouts."
           }
         },
         "step_feel": {
@@ -74,8 +72,7 @@
           "settings": {
             "number": "03",
             "title": "Feel the difference",
-            "text": "Move better, recover harder, and perform with confidence.",
-            "icon": "\u26a1"
+            "text": "Move better, recover harder, and perform with confidence."
           }
         },
         "review_marco": {
@@ -123,19 +120,7 @@
         "bundle_link": "shopify://collections/all",
         "accent_color": "#1578ff",
         "secondary_accent": "#35ff68",
-        "animation_speed": 24,
-        "enable_animations": true,
-        "show_glow_effects": true,
-        "padding_top": 64,
-        "padding_bottom": 64,
-        "hero_media_position": "right",
-        "show_trust_bar": true,
-        "show_collections": true,
-        "collection_columns_desktop": 3,
-        "show_bundle": true,
-        "show_steps": true,
-        "show_reviews": true,
-        "show_newsletter": true
+        "animation_speed": 24
       }
     },
     "featured_collection": {
