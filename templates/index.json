@@ -1,75 +1,192 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "btsets_home": {
+      "type": "btsets-home",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "trust_free_shipping": {
+          "type": "trust_item",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "text": "\u26a1 Free shipping over \u20ac75"
           }
         },
-        "button": {
-          "type": "buttons",
+        "trust_countries": {
+          "type": "trust_item",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "\ud83c\udf0d Ships to 41 countries"
+          }
+        },
+        "trust_reviews": {
+          "type": "trust_item",
+          "settings": {
+            "text": "\u2b50 4.9/5 Reviews"
+          }
+        },
+        "trust_returns": {
+          "type": "trust_item",
+          "settings": {
+            "text": "\ud83d\udd04 30-day returns"
+          }
+        },
+        "collection_bands": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Resistance Bands",
+            "text": "Mobility, warm-ups, strength",
+            "link": "shopify://collections/all"
+          }
+        },
+        "collection_guns": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Massage Guns",
+            "text": "Deep tissue recovery",
+            "link": "shopify://collections/all"
+          }
+        },
+        "collection_bundles": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Recovery Bundles",
+            "text": "Save on complete kits",
+            "link": "shopify://collections/all"
+          }
+        },
+        "step_choose": {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "title": "Choose your gear",
+            "text": "Select bands, tools, or bundles for your training style.",
+            "icon": "\ud83d\uded2"
+          }
+        },
+        "step_train": {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "title": "Train & recover",
+            "text": "Use pro-grade equipment before, during, and after workouts.",
+            "icon": "\ud83d\udcaa"
+          }
+        },
+        "step_feel": {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "title": "Feel the difference",
+            "text": "Move better, recover harder, and perform with confidence.",
+            "icon": "\u26a1"
+          }
+        },
+        "review_marco": {
+          "type": "review",
+          "settings": {
+            "stars": "\u2605\u2605\u2605\u2605\u2605",
+            "quote": "The bands are sturdy and the massage gun lives in my gym bag.",
+            "author": "\u2014 Marco, Hyrox athlete"
+          }
+        },
+        "review_sofia": {
+          "type": "review",
+          "settings": {
+            "stars": "\u2605\u2605\u2605\u2605\u2605",
+            "quote": "Premium feel, fast shipping, and exactly what I needed for recovery days.",
+            "author": "\u2014 Sofia, PT"
+          }
+        },
+        "review_liam": {
+          "type": "review",
+          "settings": {
+            "stars": "\u2605\u2605\u2605\u2605\u2605",
+            "quote": "The bundle made it simple to upgrade my warm-up and cooldown.",
+            "author": "\u2014 Liam, runner"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "trust_free_shipping",
+        "trust_countries",
+        "trust_reviews",
+        "trust_returns",
+        "collection_bands",
+        "collection_guns",
+        "collection_bundles",
+        "step_choose",
+        "step_train",
+        "step_feel",
+        "review_marco",
+        "review_sofia",
+        "review_liam"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "cta_link": "shopify://collections/all",
+        "bundle_link": "shopify://collections/all",
+        "accent_color": "#1578ff",
+        "secondary_accent": "#35ff68",
+        "animation_speed": 24,
+        "enable_animations": true,
+        "show_glow_effects": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "hero_media_position": "right",
+        "show_trust_bar": true,
+        "show_collections": true,
+        "collection_columns_desktop": 3,
+        "show_bundle": true,
+        "show_steps": true,
+        "show_reviews": true,
+        "show_newsletter": true
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
+        "title": "Bestsellers",
+        "heading_size": "h1",
+        "description": "Quick-add the recovery essentials customers come back for.",
+        "show_description": true,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 6,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
+        "show_rating": true,
+        "quick_add": "standard",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "featured_blog": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Recovery tips & training guides",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-4",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 56
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "btsets_home",
+    "featured_collection",
+    "featured_blog"
   ]
 }
