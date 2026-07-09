@@ -2,12 +2,125 @@
   "sections": {
     "btsets_home": {
       "type": "btsets-home",
+      "blocks": {
+        "trust_free_shipping": {
+          "type": "trust_item",
+          "settings": {
+            "text": "\u26a1 Free shipping over \u20ac75"
+          }
+        },
+        "trust_countries": {
+          "type": "trust_item",
+          "settings": {
+            "text": "\ud83c\udf0d Ships to 41 countries"
+          }
+        },
+        "trust_reviews": {
+          "type": "trust_item",
+          "settings": {
+            "text": "\u2b50 4.9/5 Reviews"
+          }
+        },
+        "trust_returns": {
+          "type": "trust_item",
+          "settings": {
+            "text": "\ud83d\udd04 30-day returns"
+          }
+        },
+        "collection_bands": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Resistance Bands",
+            "text": "Mobility, warm-ups, strength",
+            "link": "shopify://collections/all"
+          }
+        },
+        "collection_guns": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Massage Guns",
+            "text": "Deep tissue recovery",
+            "link": "shopify://collections/all"
+          }
+        },
+        "collection_bundles": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Recovery Bundles",
+            "text": "Save on complete kits",
+            "link": "shopify://collections/all"
+          }
+        },
+        "step_choose": {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "title": "Choose your gear",
+            "text": "Select bands, tools, or bundles for your training style."
+          }
+        },
+        "step_train": {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "title": "Train & recover",
+            "text": "Use pro-grade equipment before, during, and after workouts."
+          }
+        },
+        "step_feel": {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "title": "Feel the difference",
+            "text": "Move better, recover harder, and perform with confidence."
+          }
+        },
+        "review_marco": {
+          "type": "review",
+          "settings": {
+            "stars": "\u2605\u2605\u2605\u2605\u2605",
+            "quote": "The bands are sturdy and the massage gun lives in my gym bag.",
+            "author": "\u2014 Marco, Hyrox athlete"
+          }
+        },
+        "review_sofia": {
+          "type": "review",
+          "settings": {
+            "stars": "\u2605\u2605\u2605\u2605\u2605",
+            "quote": "Premium feel, fast shipping, and exactly what I needed for recovery days.",
+            "author": "\u2014 Sofia, PT"
+          }
+        },
+        "review_liam": {
+          "type": "review",
+          "settings": {
+            "stars": "\u2605\u2605\u2605\u2605\u2605",
+            "quote": "The bundle made it simple to upgrade my warm-up and cooldown.",
+            "author": "\u2014 Liam, runner"
+          }
+        }
+      },
+      "block_order": [
+        "trust_free_shipping",
+        "trust_countries",
+        "trust_reviews",
+        "trust_returns",
+        "collection_bands",
+        "collection_guns",
+        "collection_bundles",
+        "step_choose",
+        "step_train",
+        "step_feel",
+        "review_marco",
+        "review_sofia",
+        "review_liam"
+      ],
       "settings": {
         "cta_link": "shopify://collections/all",
-        "collection_1_link": "shopify://collections/all",
-        "collection_2_link": "shopify://collections/all",
-        "collection_3_link": "shopify://collections/all",
-        "bundle_link": "shopify://collections/all"
+        "bundle_link": "shopify://collections/all",
+        "accent_color": "#1578ff",
+        "secondary_accent": "#35ff68",
+        "animation_speed": 24
       }
     },
     "featured_collection": {
