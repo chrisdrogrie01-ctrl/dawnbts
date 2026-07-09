@@ -162,13 +162,13 @@
         "text_8qwND3": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Between The Sets is your partner in recovery and performance. We design premium fitness equipment and recovery gear—from resistance bands and massage guns to foam rollers and posture supports—built for athletes, fitness enthusiasts, and anyone serious about their training.<br/><br/>Founded with a commitment to quality and functionality, BTSETS products are engineered to help you train harder, recover smarter, and perform better. Whether you're building strength, improving mobility, or accelerating recovery, our carefully curated collection supports every stage of your fitness journey.<br/><br/>We ship across Europe and beyond, bringing professional-grade recovery tools to your doorstep. Join thousands of customers who trust BTSETS to elevate their fitness routine.</p>"
           }
         },
         "button_pi894y": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Shop now",
             "button_link": "shopify://collections",
             "button_style_secondary": false,
             "button_label_2": "",
