@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "story": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Built for the work between the sets",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>BTSETS exists to help athletes train hard, recover smarter, and return to every session ready to perform.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop recovery gear",
+            "button_link": "/collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "values": {
+      "type": "multicolumn",
+      "blocks": {
+        "performance": {
+          "type": "column",
+          "settings": {
+            "title": "Performance",
+            "text": "<p>Tools that support stronger warm-ups and better sessions.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "recovery": {
+          "type": "column",
+          "settings": {
+            "title": "Recovery",
+            "text": "<p>Every product is selected to help you reset faster.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "quality": {
+          "type": "column",
+          "settings": {
+            "title": "Quality",
+            "text": "<p>Durable essentials with a premium athletic feel.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "community": {
+          "type": "column",
+          "settings": {
+            "title": "Community",
+            "text": "<p>For lifters, runners, coaches, and everyday athletes.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "performance",
+        "recovery",
+        "quality",
+        "community"
+      ],
+      "settings": {
+        "title": "Our values",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "story",
+    "values"
+  ]
+}
