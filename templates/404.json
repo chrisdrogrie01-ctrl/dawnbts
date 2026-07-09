@@ -1,10 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "main-404"
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
+    },
+    "btsets_home_GCqK3K": {
+      "type": "btsets-home",
+      "blocks": {
+        "trust_item_m69Xjy": {
+          "type": "trust_item",
+          "settings": {
+            "text": "⚡ Free shipping over €75"
+          }
+        },
+        "trust_item_QyNR7F": {
+          "type": "trust_item",
+          "settings": {
+            "text": "🌍 Ships to 41 countries"
+          }
+        },
+        "trust_item_A48fn8": {
+          "type": "trust_item",
+          "settings": {
+            "text": "⭐ 4.9/5 Reviews"
+          }
+        },
+        "trust_item_HpeYiH": {
+          "type": "trust_item",
+          "settings": {
+            "text": "🔄 30-day returns"
+          }
+        },
+        "collection_card_T6fhyB": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Resistance Bands",
+            "text": "Mobility, warm-ups, strength",
+            "link": ""
+          }
+        },
+        "collection_card_EXqrXr": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Massage Guns",
+            "text": "Deep tissue recovery",
+            "link": ""
+          }
+        },
+        "collection_card_hVAziJ": {
+          "type": "collection_card",
+          "settings": {
+            "title": "Recovery Bundles",
+            "text": "Save on complete kits",
+            "link": ""
+          }
+        },
+        "step_8Lk6Q6": {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "title": "Choose your gear",
+            "text": "Select bands, tools, or bundles for your training style."
+          }
+        },
+        "step_rQAL3G": {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "title": "Train & recover",
+            "text": "Use pro-grade equipment before, during, and after workouts."
+          }
+        },
+        "step_JYhiWK": {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "title": "Feel the difference",
+            "text": "Move better, recover harder, and perform with confidence."
+          }
+        },
+        "review_R9jYrf": {
+          "type": "review",
+          "settings": {
+            "stars": "★★★★★",
+            "quote": "The bands are sturdy and the massage gun lives in my gym bag.",
+            "author": "— Marco, Hyrox athlete"
+          }
+        },
+        "review_4nJXjF": {
+          "type": "review",
+          "settings": {
+            "stars": "★★★★★",
+            "quote": "Premium feel, fast shipping, and exactly what I needed for recovery days.",
+            "author": "— Sofia, PT"
+          }
+        },
+        "review_G6m6kT": {
+          "type": "review",
+          "settings": {
+            "stars": "★★★★★",
+            "quote": "The bundle made it simple to upgrade my warm-up and cooldown.",
+            "author": "— Liam, runner"
+          }
+        }
+      },
+      "block_order": [
+        "trust_item_m69Xjy",
+        "trust_item_QyNR7F",
+        "trust_item_A48fn8",
+        "trust_item_HpeYiH",
+        "collection_card_T6fhyB",
+        "collection_card_EXqrXr",
+        "collection_card_hVAziJ",
+        "step_8Lk6Q6",
+        "step_rQAL3G",
+        "step_JYhiWK",
+        "review_R9jYrf",
+        "review_4nJXjF",
+        "review_G6m6kT"
+      ],
+      "name": "BTSETS homepage",
+      "settings": {
+        "color_scheme": "",
+        "accent_color": "#1578ff",
+        "secondary_accent": "#35ff68",
+        "animation_speed": 24,
+        "eyebrow": "Between The Sets",
+        "heading": "Recover Harder. Perform Better.",
+        "subheading": "Premium recovery tools and training accessories for athletes who take every set seriously.",
+        "cta_label": "Shop Now",
+        "cta_link": "",
+        "collections_eyebrow": "Shop by goal",
+        "collections_heading": "Recovery gear built for the work between the sets.",
+        "bundle_badge": "Save 20%",
+        "bundle_heading": "Recovery Starter Pack",
+        "bundle_text": "Everything athletes need to loosen tight muscles, prime movement patterns, and bounce back faster after heavy sessions.",
+        "bundle_cta_label": "Build your kit",
+        "bundle_link": "",
+        "newsletter_eyebrow": "Join the crew",
+        "newsletter_heading": "Get 10% off your first order",
+        "newsletter_placeholder": "Email address",
+        "newsletter_button": "Sign up"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "btsets_home_GCqK3K"
   ]
 }
