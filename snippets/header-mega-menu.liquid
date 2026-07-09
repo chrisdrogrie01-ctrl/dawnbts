@@ -8,6 +8,13 @@
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
+      {%- liquid
+        assign link_url = link.url
+        assign link_title_downcase = link.title | downcase
+        if link.handle == 'home' or link_title_downcase == 'home'
+          assign link_url = routes.root_url
+        endif
+      -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -73,7 +80,7 @@
         {%- else -%}
           <a
             id="HeaderMenu-{{ link.handle }}"
-            href="{{ link.url }}"
+            href="{{ link_url }}"
             class="header__menu-item list-menu__item link link--text focus-inset"
             {% if link.current %}
               aria-current="page"
