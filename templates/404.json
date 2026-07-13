@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-404",
-      "settings": {}
-    },
     "btsets_home_GCqK3K": {
       "type": "btsets-home",
       "blocks": {
@@ -152,10 +148,15 @@
         "newsletter_placeholder": "",
         "newsletter_button": ""
       }
+    },
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
-    "main",
-    "btsets_home_GCqK3K"
+    "btsets_home_GCqK3K",
+    "main"
   ]
 }
