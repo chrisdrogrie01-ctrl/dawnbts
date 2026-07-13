@@ -131,7 +131,7 @@
       ],
       "name": "BTSETS homepage",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "accent_color": "#1578ff",
         "secondary_accent": "#35ff68",
         "animation_speed": 24,
@@ -148,10 +148,10 @@
         "bundle_text": "Everything athletes need to loosen tight muscles, prime movement patterns, and bounce back faster after heavy sessions.",
         "bundle_cta_label": "Build your kit",
         "bundle_link": "",
-        "newsletter_eyebrow": "Join the crew",
-        "newsletter_heading": "Get 10% off your first order",
-        "newsletter_placeholder": "Email address",
-        "newsletter_button": "Sign up"
+        "newsletter_eyebrow": "",
+        "newsletter_heading": "",
+        "newsletter_placeholder": "",
+        "newsletter_button": ""
       }
     }
   },

@@ -1,11 +1,52 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter_BJPbeK": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_wbcJQM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_ezQqCF": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_tpRPcr": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_wbcJQM",
+        "paragraph_ezQqCF",
+        "email_form_tpRPcr"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
-      "blocks": {},
-      "block_order": [],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
@@ -23,6 +64,7 @@
     }
   },
   "order": [
+    "newsletter_BJPbeK",
     "footer"
   ]
 }
